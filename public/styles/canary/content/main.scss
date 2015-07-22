@@ -1,0 +1,190 @@
+.blog-header {
+    height: 3.8em;
+
+    h1 {
+        padding-top: 0.08em;
+        > a {
+            margin-top: 0.4em;
+            font-size: 0.78em;
+            color: white;
+        }
+    }
+
+    nav {
+    	height: inherit;
+    	line-height: inherit;
+    	vertical-align: middle;
+        position:absolute;
+        right:0;
+        top: 1.1em;
+
+    	> ul {
+    		list-style: none;
+    		margin: 0;
+    		padding-left: 0;
+
+    		> li {
+    			border-radius: $border-radius;
+    			display: inline-block;
+    			margin-left: 1.5em;
+    			padding-left: 0;
+
+    			a {
+    				color: white;
+    				display: inline-block;
+    				text-decoration: none;
+                    font-weight:300;
+                    position: relative;
+
+    				&:hover {
+    					color: white;
+    				}
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: white;
+                        visibility: hidden;
+                        -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+                        -webkit-transition: all $duration-transition ease-in-out 0s;
+                        transition: all $duration-transition ease-in-out 0s;
+                    }
+
+                    &:hover::before {
+                        visibility: visible;
+                        -webkit-transform: scaleX(1);
+                        transform: scaleX(1);
+                    }
+    			}
+
+    			&:first-child {
+    				margin-left: 0;
+    			}
+
+    			.button {
+    				height: 2.25em;
+    				line-height: 2.25em;
+    				margin-bottom: 0;
+    				padding: 0 1em;
+    				position: relative;
+    				top: -0.075em;
+    				vertical-align: middle;
+    			}
+    		}
+    	}
+    }
+}
+
+.nav-current a {
+    font-weight: bold !important;
+}
+
+/* Appears in the top left corner of your home page */
+.blog-logo {
+    margin-top: 0.8em;
+    display: block;
+    float: left;
+    background: none !important; /* Makes sure there is never a background */
+    border: none !important; /* Makes sure there is never a border */
+}
+
+.blog-logo img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 38px;
+    padding: 1px 0 5px 0;
+    width: auto;
+}
+
+.footer-wrapper {
+    position: relative;
+    background-color: $gray-lightest;
+}
+
+.blog-footer {
+    margin: 0 auto;
+    color: $gray;
+    padding-bottom: 0.6em;
+    line-height: 1;
+    font-size: 1em;
+    overflow: hidden;
+
+    .menu {
+        position: relative;
+        font-size: 13px;
+        color: $gray-darker;
+        border-bottom: 1px solid $gray-lighter;
+        overflow: hidden;
+        margin: 0 0 1.5em 0;
+        padding: 1em 0;
+
+        > li {
+            list-style: none;
+            float: left;
+
+            > a {
+                color: $gray-darker;
+                padding: 0 0.5em 0 0;
+                margin-right: 0.3em;
+                white-space: nowrap;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $gray-darkest;
+                }
+            }
+        }
+    }
+
+    .footer-links {
+        margin: 0;
+        float: right;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin-left: 0;
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0.5em 0.6em 0;
+
+        &:last-child {
+            margin: 0 0 0.6em 0;
+
+            > a {
+                padding: 0;
+                margin-right: 0;
+                border-right: none;
+            }
+        }
+
+        > a {
+            color: $gray-darker;
+            padding: 0 0.5em 0 0;
+            margin-right: 0.3em;
+            border-right: 1px solid $gray-dark;
+            white-space: nowrap;
+
+            &:hover {
+                text-decoration: underline;
+                color: $gray-darkest;
+            }
+        }
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        line-height: 1.3;
+        font-weight: 400;
+        width: auto;
+        float: left;
+        margin: 0 0.5em 0.6em 0;
+    }
+}

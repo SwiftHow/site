@@ -1,0 +1,5 @@
+<ul class="menu">
+    {{#each navLinks}}
+    <li class="{{#ifeq key ../section}} nav-current{{/ifeq}}" role="menuitem"><a href="{{href}}">{{label}}</a></li>
+    {{/each}}
+</ul>
