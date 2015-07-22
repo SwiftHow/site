@@ -1,0 +1,32 @@
+
+$gray-lightest:     #F8F8F8;
+$gray-lighter:      #EEEEEE;
+$gray-light:        #DDDDDD;
+$gray:              #CCCCCC;
+$gray-dark:         #999999;
+$gray-darker:       #666666;
+$gray-darkest:      #333333;
+
+$swift-orange:      #FB9C44;
+$swift-from:        #FB9C44;
+$swift-to:          #FC4831;
+
+$twitter-color:     #55ACEE;
+$facebook-color:    #3B5998;
+$google-color:      #DD4B39;
+
+// thanks to: http://nipponcolors.com/#benikeshinezumi
+$tsuyukusa:         #2EA9DF;
+$sora:              #58B2DC;
+
+$primary-color:     $facebook-color;
+$secondary-color:   $twitter-color;
+
+$link-color:        $primary-color;
+$hover-color:       darken($link-color, 15%);
+
+$sans-font:         "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+$serif-font:        "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif";
+
+$border-radius:             3px;
+$duration-transition:       0.2s;

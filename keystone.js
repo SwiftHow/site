@@ -10,6 +10,13 @@ var handlebars = require('express-handlebars');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 
+var mongoName = process.env.MONGO_DB_NAME || 'swift-how';
+var mongoPath = 'mongodb://localhost/' + mongoName;
+if (process.env.MONGO_PORT_27017_TCP_ADDR && process.env.MONGO_PORT_27017_TCP_PORT) {
+	var path = process.env.MONGO_PORT_27017_TCP_ADDR + ":" + process.env.MONGO_PORT_27017_TCP_PORT;
+	mongoPath = 'mongodb://' + mongoPath + '/' + mongoName;
+}
+
 keystone.init({
 
 	'name': 'Swift How',
@@ -30,12 +37,16 @@ keystone.init({
 	}).engine,
 
 	'auto update': true,
-	// 'mongo': 'mongodb://localhost/my-project',
+	'mongo': mongoPath,
 
 	'session': false,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': 'swift-how-site-cookie-secret~~'
+	'cookie secret': process.env.COOKIE_SECRET || 'your-cookie-secret',
+
+	'sass options': {
+		outputStyle: 'compressed'
+	}
 });
 
 // Load your project's Models

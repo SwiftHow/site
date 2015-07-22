@@ -1,0 +1,16 @@
+.spilled {
+    background-color: $twitter-color;
+    background-image: linear-gradient(to left, $twitter-color, $facebook-color);
+}
+
+.icon-twitter:hover {
+    color: $twitter-color;
+}
+
+.icon-facebook:hover {
+    color: $facebook-color;
+}
+
+.icon-google-plus:hover {
+    color: $google-color;
+}
