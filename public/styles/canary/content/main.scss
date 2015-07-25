@@ -190,11 +190,70 @@
 }
 
 .slogan {
+    text-align: center;
+    padding-bottom: 2em;
+    color: white;
+
     h1 {
-        text-align: center;
         color: white;
-        padding: 3em 0 0 0;
-        font-size: 2em;
+        padding: 2.8em 0 0 0;
+        font-size: 1.8em;
         font-weight: bold;
+        margin-bottom: 0.1em;
     }
+
+    p {
+        color: darken(white, 10%);
+        font-weight: lighter;
+
+        strong {
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+.slogan .slogan-image {
+    margin: 2em 0 0 0;
+    text-align: right;
+    height: 130px;
+
+    img {
+        height: 130px;
+    }
+}
+
+.canary-cards {
+    h2 {
+        color: $gray-dark;
+        font-size: 1.4em;
+        margin-left: 0.7em;
+    }
+}
+
+.canary-card {
+    img {
+        height: 210px;
+    }
+
+    .mdl-card__title-text {
+        font-size: 1.2em;
+        color: $gray-darkest;
+    }
+
+    .mdl-typography--subhead {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* number of lines to show */
+    }
+}
+
+.canary-progress-wrap {
+    height: 250px;
+}
+
+.canary-progress {
+    width: 250px;
 }

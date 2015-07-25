@@ -27,7 +27,7 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Home',		key: 'home',		href: '/' },
 		{ label: 'Blog',		key: 'blog',		href: 'https://blog.swift.how/' },
 		{ label: 'Explore',		key: 'explore',		href: '/explore' },
-		{ label: 'Tutorial',	key: 'tutorial',	href: '/tutorial' },
+		// { label: 'Tutorial',	key: 'tutorial',	href: '/tutorial' },
 	];
 
 	locals.user = req.user;
