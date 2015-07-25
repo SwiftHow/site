@@ -43,10 +43,6 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET || 'your-cookie-secret',
-
-	'sass options': {
-		outputStyle: 'compressed'
-	}
 });
 
 // Load your project's Models
