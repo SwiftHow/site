@@ -36,5 +36,5 @@ Link.schema.pre('save', function(done) {
 });
 
 Link.defaultSort = '-created';
-Link.defaultColumns = 'name, description, type, hot, raw, created';
+Link.defaultColumns = 'name, description, type, state, hot, raw, created';
 Link.register();

@@ -24,7 +24,7 @@ function linkByType(req, res) {
 
     view.on('init', function(next) {
         Link.model.find()
-            // .where('state', 'published')
+            .where('state', 'published')
             .where('type', type)
             .sort('-created')
             .exec(function(err, links) {
