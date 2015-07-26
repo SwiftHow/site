@@ -1,45 +1,61 @@
-<div class="container">
+<div class="container canary-contact">
 	<h1>Contact Us</h1>
 </div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+<div class="container canary-contact-form">
+	{{#if enquirySubmitted}}
+	<h3 class="thanks">Thanks for getting in touch.</h3>
+	{{else}}
+	<form method="post">
+		<input type="hidden" name="action" value="contact">
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" name="name.full" id="name.full" />
+			<label class="mdl-textfield__label" for="name.full">Name...</label>
 		</div>
-	</div>
+		<br/>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" pattern="^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$" name="email" id="email" />
+			<label class="mdl-textfield__label" for="email">Email...</label>
+			<span class="mdl-textfield__error">Input is not a email!</span>
+		</div>
+		<div class="canary-contact-form__options">
+			<label class="question">What are you contacting us about?</label>
+			<br/>
+			<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flash1">
+				<input checked class="mdl-radio__button" id="flash1" name="enquiryType" type="radio"
+				value="message">
+				<span class="mdl-radio__label">Just leaving a message</span>
+			</label>
+			<br/>
+			<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flash2">
+				<input class="mdl-radio__button" id="flash2" name="enquiryType" type="radio" value="question">
+				<span class="mdl-radio__label">I've got a question</span>
+			</label>
+			<br/>
+			<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flash3">
+				{{#if isBugReport}}
+				<input class="mdl-radio__button" id="flash3" name="enquiryType" type="radio" value="bug" checked>
+				{{else}}
+				<input class="mdl-radio__button" id="flash3" name="enquiryType" type="radio" value="bug">
+				{{/if}}
+				<span class="mdl-radio__label">Bug report</span>
+			</label>
+			<br/>
+			<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flash4">
+				<input class="mdl-radio__button" id="flash4" name="enquiryType" type="radio" value="other">
+				<span class="mdl-radio__label">Something else...</span>
+			</label>
+			<br/>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<textarea class="mdl-textfield__input" type="text" rows= "8" name="message" id="message"></textarea>
+			<label class="mdl-textfield__label" for="message">Leave us a message...</label>
+		</div>
+		<div class="form-actions">
+			<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				OK, Send
+			</button>
+		</div>
+	</form>
+	{{/if}}
 </div>
 </div>

@@ -512,28 +512,117 @@ hr {
   .slogan .slogan-image img {
     height: 130px; }
 
-.canary-cards h2 {
-  color: #999999;
-  font-size: 1.4em;
-  margin-left: 0.7em; }
+.canary-cards {
+  margin-bottom: 2.5em; }
+  .canary-cards h2 {
+    color: #999999;
+    font-size: 1.4em;
+    margin-left: 0.7em; }
 
-.canary-card img {
-  height: 210px; }
-
-.canary-card .mdl-card__title-text {
-  font-size: 1.2em;
-  color: #333333; }
-
-.canary-card .mdl-typography--subhead {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  /* number of lines to show */ }
+.canary-card {
+  padding-bottom: 3em; }
+  .canary-card .mdl-card__title-text {
+    font-size: 1.2em;
+    color: #333333;
+    height: auto; }
+  .canary-card .mdl-typography--subhead.limit-length {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */ }
+  .canary-card .mdl-card__media {
+    overflow: hidden;
+    background: transparent; }
+    .canary-card .mdl-card__media img {
+      background-color: #F8F8F8;
+      min-height: 150px;
+      width: 100%; }
+  .canary-card .mdl-card__title {
+    background: transparent;
+    height: auto;
+    padding: 0.55em 1em; }
+  .canary-card .mdl-card__supporting-text {
+    background: transparent;
+    height: auto;
+    padding: 0.2em 1.3em; }
+  .canary-card .mdl-card__actions {
+    position: absolute;
+    bottom: 0; }
+    .canary-card .mdl-card__actions a {
+      font-weight: bold; }
 
 .canary-progress-wrap {
-  height: 250px; }
+  width: 100%;
+  height: 250px;
+  position: relative; }
 
 .canary-progress {
-  width: 250px; }
+  width: 250px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/* Contact */
+.canary-contact h1 {
+  text-align: center;
+  color: #999999;
+  font-size: 2.2em;
+  margin: 1.2em 0 0.6em; }
+
+.canary-contact-form {
+  text-align: center;
+  margin-bottom: 2.5em; }
+  .canary-contact-form .thanks {
+    color: green;
+    font-size: 1.4em; }
+  .canary-contact-form .canary-contact-form__options {
+    margin: 2em auto;
+    text-align: left;
+    width: 300px; }
+    .canary-contact-form .canary-contact-form__options label {
+      margin: 0.3em 0; }
+    .canary-contact-form .canary-contact-form__options .question {
+      color: #333333; }
+
+.canary-tabs a {
+  font-size: 0.7em; }
+
+.canary-tabs a.is-active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #55ACEE; }
+
+.canary-link-list .date-tag {
+  border-radius: 2px;
+  background-color: white;
+  color: #666666; }
+  .canary-link-list .date-tag span {
+    display: block; }
+  .canary-link-list .date-tag .day {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.4em 0.2em; }
+  .canary-link-list .date-tag .year {
+    text-align: right;
+    font-size: 0.8em;
+    padding: 0.4em 0.5em; }
+
+.canary-link-list .no-content {
+  text-align: center; }
+  .canary-link-list .no-content h4 {
+    margin: 2em 0; }
+  .canary-link-list .no-content a {
+    margin: 4em 0; }
+  .canary-link-list .no-content img {
+    display: block;
+    margin: 0 auto;
+    width: 280px; }

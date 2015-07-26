@@ -38,6 +38,9 @@ exports = module.exports = function(app) {
 	// Views
 	app.get('/', routes.views.index);
 	app.all('/contact', routes.views.contact);
+	app.get('/link', routes.views.link.linkPage);
+	app.get('/link/type/:type', routes.views.link.linkByType);
+	app.get('/link/:id', routes.views.link.jump);
 
 	app.get('/latest-post', routes.api.ghost);
 

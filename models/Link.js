@@ -11,15 +11,19 @@ var Link = new keystone.List('Link');
 Link.add({
     name: { type: Types.Text, required: true },
     raw: { type: Types.Url, required: true, initial: false },
+    image: { type: Types.Url },
     description: { type: Types.Textarea },
     comment: { type: Types.Textarea },
     updated: { type: Types.Date, default: Date.now },
     created: { type: Types.Date, default: Date.now },
     type: { type: Types.Select, options: [
-        'tutorial',
-        'project',
-        'misc',
-        'list'
+        'article',
+        'framework',
+        'collection'
+    ] },
+    state: { type: Types.Select, options: [
+        'published',
+        'draft'
     ] },
     tag: { type: Types.Key, index: true },
     hot: { type: Types.Number, default: 0 }

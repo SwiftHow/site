@@ -224,6 +224,8 @@
 }
 
 .canary-cards {
+    margin-bottom: 2.5em;
+
     h2 {
         color: $gray-dark;
         font-size: 1.4em;
@@ -232,28 +234,163 @@
 }
 
 .canary-card {
-    img {
-        height: 210px;
-    }
+    padding-bottom: 3em;
 
     .mdl-card__title-text {
         font-size: 1.2em;
         color: $gray-darkest;
+        height: auto;
     }
 
-    .mdl-typography--subhead {
+    .mdl-typography--subhead.limit-length {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2; /* number of lines to show */
     }
+
+    .mdl-card__media {
+        overflow: hidden;
+        background: transparent;
+
+        img {
+            background-color: $gray-lightest;
+            min-height: 150px;
+            width: 100%;
+        }
+    }
+
+    .mdl-card__title {
+        background: transparent;
+        height: auto;
+        padding: 0.55em 1em;
+    }
+
+    .mdl-card__supporting-text {
+        background: transparent;
+        height: auto;
+        padding: 0.2em 1.3em;
+    }
+
+    .mdl-card__actions {
+        position: absolute;
+        bottom: 0;
+
+        a {
+            font-weight: bold;
+        }
+    }
 }
 
 .canary-progress-wrap {
+    width: 100%;
     height: 250px;
+    position: relative;
 }
 
 .canary-progress {
     width: 250px;
+    position: absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* Contact */
+.canary-contact {
+    h1 {
+        text-align: center;
+        color: $gray-dark;
+        font-size: 2.2em;
+        margin: 1.2em 0 0.6em;
+    }
+}
+
+.canary-contact-form {
+    text-align: center;
+    margin-bottom: 2.5em;
+
+    .thanks {
+        color: green;
+        font-size: 1.4em;
+    }
+
+    .canary-contact-form__options {
+        margin: 2em auto;
+        text-align: left;
+        width: 300px;
+
+        label {
+            margin: 0.3em 0;
+        }
+
+        .question {
+            color: $gray-darkest;
+        }
+    }
+}
+
+.canary-tabs {
+    a {
+        font-size: 0.7em;
+    }
+
+    a.is-active {
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $twitter-color;
+        }
+    }
+}
+
+.canary-link-list {
+
+    .date-tag {
+        border-radius: 2px;
+        background-color: white;
+        color: $gray-darker;
+
+        span {
+            display: block;
+        }
+
+        .day {
+            text-align: center;
+            font-weight: bold;
+            padding: 0.4em 0.2em;
+        }
+
+        .year {
+            text-align: right;
+            font-size: 0.8em;
+            padding: 0.4em 0.5em;
+        }
+    }
+
+    .no-content {
+        text-align: center;
+
+        h4 {
+            margin: 2em 0;
+        }
+
+        a {
+            margin: 4em 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 280px;
+        }
+    }
 }

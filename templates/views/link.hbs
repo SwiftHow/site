@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="canary-tabs mdl-tabs">
+        <div class="mdl-tabs__tab-bar">
+            {{#each linkTypes}}
+            <a href="/link/type/{{value}}" class="mdl-tabs__tab {{#ifeq value ../type}} is-active{{/ifeq}}">{{value}}</a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="canary-link-list">
+        <div class="mdl-grid">
+            {{#if links.length}}
+            {{#each links}}
+            <div class="mdl-cell mdl-cell--1-col">
+                <div class="date-tag mdl-shadow--2dp">
+                    <span class="day">{{date created format="MM-DD"}}</span>
+                    <span class="year">{{date created format="YYYY"}}</span>
+                </div>
+            </div>
+            <div class="canary-card canary-link-card mdl-card mdl-cell mdl-cell--11-col mdl-shadow--2dp">
+    		  {{#if image}}
+              <div class="mdl-card__media">
+    			<img src="{{image}}">
+    		  </div>
+              {{/if}}
+    		  <div class="mdl-card__title">
+    			 <h4 class="mdl-card__title-text">{{name}}</h4>
+    		  </div>
+    		  <div class="mdl-card__supporting-text">
+    			<span class="mdl-typography--font-light mdl-typography--subhead">{{description}}</span>
+    		  </div>
+    		  <div class="mdl-card__actions">
+    			 <a class="android-link mdl-button mdl-js-button mdl-button--primary" href="">
+    			   Jump to the link!
+    			 </a>
+    		  </div>
+    		</div>
+            {{/each}}
+            {{else}}
+            <div class="no-content mdl-cell mdl-cell--12-col bird-watch">
+                <h4>No links for this tab now.</h4>
+                <a href="/contact" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    I have some advice!
+                </a>
+                <img src="/images/birds@3x.png" alt="" />
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>
