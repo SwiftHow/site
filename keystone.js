@@ -17,6 +17,7 @@ if (process.env.MONGO_PORT_27017_TCP_ADDR && process.env.MONGO_PORT_27017_TCP_PO
 	var path = process.env.MONGO_PORT_27017_TCP_ADDR + ":" + process.env.MONGO_PORT_27017_TCP_PORT;
 	mongoPath = 'mongodb://' + mongoPath + '/' + mongoName;
 }
+console.log(mongoPath);
 
 keystone.init({
 
