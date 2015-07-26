@@ -10,7 +10,7 @@ var Link = new keystone.List('Link');
 
 Link.add({
     name: { type: Types.Text, required: true },
-    raw: { type: Types.Url, required: true, initial: false },
+    raw: { type: Types.Url },
     image: { type: Types.Url },
     description: { type: Types.Textarea },
     comment: { type: Types.Textarea },
