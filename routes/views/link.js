@@ -2,7 +2,7 @@ var keystone = require('keystone');
 var Link = keystone.list('Link');
 
 function linkPage(req, res) {
-    res.redirect('/link/type/article');
+    res.redirect('/link/type/framework');
 }
 
 function linkByType(req, res) {
@@ -15,8 +15,8 @@ function linkByType(req, res) {
 	// item in the header navigation.
 	locals.section = 'link';
     locals.linkTypes = [
-        { value: 'article' },
         { value: 'framework' },
+        { value: 'article' },
         { value: 'collection' }
     ];
 
