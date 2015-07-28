@@ -536,21 +536,25 @@ hr {
     overflow: hidden;
     background: #F8F8F8; }
     .canary-card .mdl-card__media img {
-      height: 160px;
-      display: block;
-      max-width: 80%;
-      padding: 0.6em 0;
-      /* Centers an image by (1) pushing its left edge to the
-               center of its container and (2) shifting the entire image
-               in the opposite direction by half its own width.
-               Works for images that are larger than their containers. */
-      position: relative;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      /* for Safari and iOS */
-      -ms-transform: translateX(-50%);
-      /* for IE9 */
-      transform: translateX(-50%); }
+      width: 100%;
+      min-height: 180px; }
+  .canary-card .mdl-card__media.canary-link-image img {
+    width: auto;
+    height: 160px;
+    display: block;
+    max-width: 80%;
+    padding: 0.6em 0;
+    /* Centers an image by (1) pushing its left edge to the
+             center of its container and (2) shifting the entire image
+             in the opposite direction by half its own width.
+             Works for images that are larger than their containers. */
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    /* for Safari and iOS */
+    -ms-transform: translateX(-50%);
+    /* for IE9 */
+    transform: translateX(-50%); }
   .canary-card .mdl-card__title {
     background: transparent;
     height: auto;
