@@ -255,8 +255,8 @@
         background: $gray-lightest;
 
         img {
-            min-height: 150px;
-            max-height: 180px;
+            // min-height: 150px;
+            height: 160px;
             display: block;
             max-width: 80%;
             padding: 0.6em 0;

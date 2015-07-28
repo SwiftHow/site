@@ -536,8 +536,7 @@ hr {
     overflow: hidden;
     background: #F8F8F8; }
     .canary-card .mdl-card__media img {
-      min-height: 150px;
-      max-height: 180px;
+      height: 160px;
       display: block;
       max-width: 80%;
       padding: 0.6em 0;
