@@ -38,8 +38,20 @@ function linkByType(req, res) {
     view.render('link');
 }
 
-function jump(req, res) {
+function jump(req, res, next) {
+    var id = req.params.id;
 
+    Link.model.findById(id, function(err, link) {
+        if(err) return next(err);
+
+        // redirect
+        res.redirect(link.raw);
+
+        link.hot++;
+        link.save(function(err) {
+            if(err) return next(err);
+        });
+    });
 }
 
 module.exports.linkPage = linkPage;
