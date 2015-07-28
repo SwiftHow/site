@@ -41,6 +41,7 @@ exports = module.exports = function(app) {
 	app.get('/link', routes.views.link.linkPage);
 	app.get('/link/type/:type', routes.views.link.linkByType);
 	app.get('/link/:id', routes.views.link.jump);
+	app.get('/news', routes.views.news);
 
 	app.get('/latest-post', routes.api.ghost);
 

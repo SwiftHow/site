@@ -32,7 +32,15 @@ Link.add({
 Link.schema.pre('save', function(done) {
 	this.updated = Date.now;
 
-	done();
+    if (this.isNew) {
+        var New = keystone.list('New');
+        New.model({
+            behavior: 'newLink',
+            link: this.id
+        }).save(done);
+    } else {
+        done();
+    }
 });
 
 Link.defaultSort = '-created';
