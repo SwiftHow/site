@@ -655,13 +655,13 @@ hr {
     font-size: 0.8em;
     padding: 0.4em 0.5em; }
 
-.canary-link-list .no-content {
+.no-content {
   text-align: center; }
-  .canary-link-list .no-content h4 {
+  .no-content h4 {
     margin: 2em 0; }
-  .canary-link-list .no-content a {
+  .no-content a {
     margin: 4em 0; }
-  .canary-link-list .no-content img {
+  .no-content img {
     display: block;
     margin: 0 auto;
     width: 280px; }
