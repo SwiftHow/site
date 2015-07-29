@@ -13,8 +13,8 @@ New.add({
         'newLink',
         'newApp'
     ] },
-    updatedAt: { type: Types.Date, default: Date.now },
-    createdAt: { type: Types.Date, default: Date.now },
+    updatedAt: { type: Types.Datetime, default: Date.now },
+    createdAt: { type: Types.Datetime, default: Date.now },
     link: { type: Types.Relationship, ref: 'Link' },
     app: { type: Types.Relationship, ref: 'App' }
 });

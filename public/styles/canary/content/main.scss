@@ -317,6 +317,37 @@
     margin: auto;
 }
 
+/* News */
+.canary-news {
+    margin-bottom: 2.5em;
+
+    h1 {
+        text-align: center;
+        color: $gray-dark;
+        font-size: 2.2em;
+        margin: 1.2em 0 0.6em;
+    }
+
+    li {
+        position: relative;
+        border-bottom: 1px solid $gray-lightest;
+        padding: 0.6em 1.2em;
+        border-radius: 4px;
+        list-style: none;
+
+        &:hover {
+            background-color: $gray-lightest;
+        }
+    }
+
+    .canary-jump {
+        position: absolute;
+        right: 1.2em;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+}
+
 /* Contact */
 .canary-contact {
     h1 {

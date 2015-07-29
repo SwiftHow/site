@@ -14,8 +14,8 @@ Link.add({
     image: { type: Types.Url },
     description: { type: Types.Textarea },
     comment: { type: Types.Textarea },
-    updated: { type: Types.Date, default: Date.now },
-    created: { type: Types.Date, default: Date.now },
+    updated: { type: Types.Datetime, default: Date.now },
+    created: { type: Types.Datetime, default: Date.now },
     type: { type: Types.Select, options: [
         'article',
         'framework',

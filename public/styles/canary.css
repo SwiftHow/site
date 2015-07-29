@@ -583,6 +583,28 @@ hr {
   bottom: 0;
   margin: auto; }
 
+/* News */
+.canary-news {
+  margin-bottom: 2.5em; }
+  .canary-news h1 {
+    text-align: center;
+    color: #999999;
+    font-size: 2.2em;
+    margin: 1.2em 0 0.6em; }
+  .canary-news li {
+    position: relative;
+    border-bottom: 1px solid #F8F8F8;
+    padding: 0.6em 1.2em;
+    border-radius: 4px;
+    list-style: none; }
+    .canary-news li:hover {
+      background-color: #F8F8F8; }
+  .canary-news .canary-jump {
+    position: absolute;
+    right: 1.2em;
+    font-weight: bold;
+    font-size: 0.8em; }
+
 /* Contact */
 .canary-contact h1 {
   text-align: center;
