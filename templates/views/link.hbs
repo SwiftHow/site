@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container canary-link-page">
     <div class="canary-tabs mdl-tabs">
         <div class="mdl-tabs__tab-bar">
             {{#each linkTypes}}
@@ -36,12 +36,14 @@
     		</div>
             {{/each}}
             {{else}}
-            <div class="no-content mdl-cell mdl-cell--12-col bird-watch">
+            <div class="no-content mdl-cell mdl-cell--12-col">
                 <h4>No links for this tab now.</h4>
                 <a href="/contact" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                     I have some advice!
                 </a>
-                <img src="/images/birds@3x.png" alt="" />
+                <div class="bird-watch">
+                    <img src="/images/birds@3x.png" alt="" />
+                </div>
             </div>
             {{/if}}
         </div>

@@ -628,6 +628,9 @@ hr {
     .canary-contact-form .canary-contact-form__options .question {
       color: #333333; }
 
+.canary-link-page {
+  margin-bottom: 1.6em; }
+
 .canary-tabs a {
   font-size: 0.7em; }
 
@@ -665,6 +668,8 @@ hr {
     display: block;
     margin: 0 auto;
     width: 280px; }
+  .no-content .bird-watch {
+    height: 140px; }
 
 .canary-link-detail {
   margin-bottom: 2em; }

@@ -385,6 +385,10 @@
     }
 }
 
+.canary-link-page {
+    margin-bottom: 1.6em;
+}
+
 .canary-tabs {
     a {
         font-size: 0.7em;
@@ -444,5 +448,9 @@
         display: block;
         margin: 0 auto;
         width: 280px;
+    }
+
+    .bird-watch {
+        height: 140px;
     }
 }
