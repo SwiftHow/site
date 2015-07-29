@@ -13,10 +13,34 @@
 </div>
 
 <div class="canary-cards container">
+	{{#if todayLink}}
+	<h2>Today Recommendation</h2>
+
+	<div class="mdl-grid">
+		<div class="canary-card canary-link-card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+		  {{#if todayLink.image}}
+		  <div class="mdl-card__media canary-link-image">
+			<img src="{{todayLink.image}}">
+		  </div>
+		  {{/if}}
+		  <div class="mdl-card__title">
+			 <h4 class="mdl-card__title-text">{{todayLink.name}}</h4>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+			<span class="mdl-typography--font-light mdl-typography--subhead">{{todayLink.description}}</span>
+		  </div>
+		  <div class="mdl-card__actions">
+			 <a class="android-link mdl-button mdl-js-button mdl-button--primary" href="/link/{{date todayLink.created format="YYYY/MM/DD"}}/{{todayLink.urlName}}?id={{todayLink.id}}">
+			   See Detail!
+			 </a>
+		  </div>
+		</div>
+	</div>
+	{{/if}}
+
 	<h2>Learn more from Swift.How</h2>
 
 	<div class="mdl-grid">
-
 		<div class="canary-card mdl-cell mdl-card mdl-cell--4-col mdl-shadow--2dp">
 		  <div class="mdl-card__media">
 			<img src="/images/card-links.png">

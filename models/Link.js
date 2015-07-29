@@ -43,6 +43,11 @@ Link.schema.pre('save', function(done) {
     }
 });
 
+// Provide access to Keystone
+Link.schema.virtual('urlName').get(function() {
+    return this.name.toLowerCase().replace(/\s+/g,'-');
+});
+
 Link.defaultSort = '-created';
 Link.defaultColumns = 'name, type, state, hot, raw, created';
 Link.register();

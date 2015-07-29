@@ -10,6 +10,19 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'news';
 
+	view.on('init', function(next) {
+		New.model.find()
+            .sort('-created')
+			.populate('link')
+			.populate('app')
+            .exec(function(err, news) {
+                if(err) return next(err);
+
+                locals.news = news;
+                next();
+            });
+	});
+
 	// Render the view
 	view.render('news');
 

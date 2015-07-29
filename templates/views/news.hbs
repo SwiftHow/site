@@ -1,5 +1,13 @@
 <div class="container">
     <div class="mdl-badge" data-badge="3">
-        
+
     </div>
+    {{#if news.length}}
+    {{#each news}}
+    <div class="">
+        {{behavior}}
+        {{link.name}}
+    </div>
+    {{/each}}
+    {{/if}}
 </div>

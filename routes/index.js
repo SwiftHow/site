@@ -40,7 +40,9 @@ exports = module.exports = function(app) {
 	app.all('/contact', routes.views.contact);
 	app.get('/link', routes.views.link.linkPage);
 	app.get('/link/type/:type', routes.views.link.linkByType);
-	app.get('/link/:id', routes.views.link.jump);
+	app.get('/link/:year/:month/:day/:name', routes.views.link.linkDetail);
+	app.get('/link/:id', routes.views.link.linkDetail);
+	app.get('/link/jump/:id', routes.views.link.jump);
 	app.get('/news', routes.views.news);
 
 	app.get('/latest-post', routes.api.ghost);

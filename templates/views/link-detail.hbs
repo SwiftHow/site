@@ -1,0 +1,24 @@
+<div class="container">
+    <a type="button" name="button" class="mdl-button" href="/link/type/{{link.type}}">Back to the List!</a>
+    <div class="mdl-grid">
+		<div class="canary-card canary-link-card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+		  {{#if link.image}}
+		  <div class="mdl-card__media canary-link-image">
+			<img src="{{link.image}}">
+		  </div>
+		  {{/if}}
+		  <div class="mdl-card__title">
+			 <h4 class="mdl-card__title-text">{{link.name}}</h4>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+			<span class="mdl-typography--font-light mdl-typography--subhead">{{link.description}}</span>
+		  </div>
+		  <div class="mdl-card__actions">
+			 <a class="android-link mdl-button mdl-js-button mdl-button--primary" target="_blank" href="/link/jump/{{link.id}}?to={{link.raw}}">
+			   Jump to the link!
+			 </a>
+		  </div>
+		</div>
+	</div>
+    {{> comments}}
+</div>

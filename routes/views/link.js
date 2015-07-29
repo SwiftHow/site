@@ -38,14 +38,34 @@ function linkByType(req, res) {
     view.render('link');
 }
 
+function linkDetail(req, res, next) {
+    var id = req.query.id;
+    var view = new keystone.View(req, res);
+	var locals = res.locals;
+
+    locals.section = 'link';
+
+    view.on('init', function(next) {
+        Link.model.findById(id, function(err, link) {
+            if(err) return next(err);
+
+            locals.link = link;
+            next();
+        });
+    });
+
+    view.render('link-detail');
+}
+
 function jump(req, res, next) {
     var id = req.params.id;
+    var to = req.query.to;
+
+    // redirect
+    res.redirect(to);
 
     Link.model.findById(id, function(err, link) {
         if(err) return next(err);
-
-        // redirect
-        res.redirect(link.raw);
 
         link.hot++;
         link.save(function(err) {
@@ -56,4 +76,5 @@ function jump(req, res, next) {
 
 module.exports.linkPage = linkPage;
 module.exports.linkByType = linkByType;
+module.exports.linkDetail = linkDetail;
 module.exports.jump = jump;
