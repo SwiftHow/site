@@ -1,24 +1,38 @@
-<div class="container">
-    <a type="button" name="button" class="mdl-button" href="/link/type/{{link.type}}">Back to the List!</a>
-    <div class="mdl-grid">
-		<div class="canary-card canary-link-card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
-		  {{#if link.image}}
-		  <div class="mdl-card__media canary-link-image">
-			<img src="{{link.image}}">
-		  </div>
-		  {{/if}}
-		  <div class="mdl-card__title">
-			 <h4 class="mdl-card__title-text">{{link.name}}</h4>
-		  </div>
-		  <div class="mdl-card__supporting-text">
-			<span class="mdl-typography--font-light mdl-typography--subhead">{{link.description}}</span>
-		  </div>
-		  <div class="mdl-card__actions">
-			 <a class="android-link mdl-button mdl-js-button mdl-button--primary" target="_blank" href="/link/jump/{{link.id}}?to={{link.raw}}">
-			   Jump to the link!
-			 </a>
-		  </div>
-		</div>
-	</div>
-    {{> comments}}
+<div class="container canary-link-detail">
+    <a class="link-back-button mdl-button mdl-js-button mdl-button--primary" href="/link/type/{{link.type}}">
+        Back to List
+    </a>
+
+    <h2><a target="_blank" href="/link/jump/{{link.id}}?to={{link.raw}}">{{link.name}}</a></h2>
+
+    <div class="link-detail-mark link-detail-content">
+        <span>Publish At: {{date link.created format="YYYY-MM-DD"}}</span>
+            <span>Hot: {{link.hot}}</span>
+    </div>
+
+    {{# if link.image}}
+    <img class="link-detail-image" src="{{link.image}}" alt="" />
+    {{/if}}
+
+    {{# if link.description}}
+    <div class="link-detail-description link-detail-content">
+        <h3>Description</h3>
+        <span class="mdl-typography--font-light mdl-typography--subhead">{{link.description}}</span>
+    </div>
+    {{/if}}
+
+    {{# if link.comment}}
+    <div class="link-detail-comment link-detail-content">
+        <h3>Comment</h3>
+        <span class="mdl-typography--font-light mdl-typography--subhead">{{link.comment}}</span>
+    </div>
+    {{/if}}
+
+    <div class="link-detail-jump link-detail-content">
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" target="_blank" href="/link/jump/{{link.id}}?to={{link.raw}}">Jump to the Link!</a>
+    </div>
+
+    <div class="link-detail-disqus link-detail-content">
+        {{> comments}}
+    </div>
 </div>

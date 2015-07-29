@@ -665,3 +665,50 @@ hr {
     display: block;
     margin: 0 auto;
     width: 280px; }
+
+.canary-link-detail {
+  margin-bottom: 2em; }
+  .canary-link-detail .link-back-button {
+    margin-top: 1.5em;
+    font-weight: bold; }
+  .canary-link-detail h2 {
+    text-align: center;
+    color: #3B5998;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em; }
+    .canary-link-detail h2 a:hover {
+      text-decoration: underline; }
+  .canary-link-detail .link-detail-mark span {
+    display: block;
+    text-align: right;
+    font-size: 0.6em; }
+  .canary-link-detail .link-detail-image {
+    background-color: #F8F8F8;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.6em 0;
+    /* Centers an image by (1) pushing its left edge to the
+           center of its container and (2) shifting the entire image
+           in the opposite direction by half its own width.
+           Works for images that are larger than their containers. */
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    /* for Safari and iOS */
+    -ms-transform: translateX(-50%);
+    /* for IE9 */
+    transform: translateX(-50%); }
+  .canary-link-detail .link-detail-content {
+    margin: 1.5em 0.4em; }
+    .canary-link-detail .link-detail-content h3 {
+      color: #666666;
+      font-size: 1.4em; }
+  .canary-link-detail .link-detail-comment span {
+    display: block;
+    padding: 0.8em;
+    color: white;
+    border-radius: 6px;
+    background-color: #7abef2; }
+  .canary-link-detail .link-detail-jump {
+    text-align: center; }

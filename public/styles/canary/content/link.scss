@@ -1,0 +1,70 @@
+.canary-link-detail {
+    margin-bottom: 2em;
+
+    .link-back-button {
+        margin-top: 1.5em;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: center;
+        color: $facebook-color;
+        margin-top: 0.3em;
+        margin-bottom: 0.8em;
+
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .link-detail-mark {
+
+        span {
+            display: block;
+            text-align: right;
+            font-size: 0.6em;
+        }
+    }
+
+    .link-detail-image {
+        background-color: $gray-lightest;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        padding: 0.6em 0;
+        /* Centers an image by (1) pushing its left edge to the
+           center of its container and (2) shifting the entire image
+           in the opposite direction by half its own width.
+           Works for images that are larger than their containers. */
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%); /* for Safari and iOS */
+        -ms-transform: translateX(-50%); /* for IE9 */
+        transform: translateX(-50%);
+    }
+
+    .link-detail-content {
+        margin: 1.5em 0.4em;
+
+        h3 {
+            color: $gray-darker;
+            font-size: 1.4em;
+        }
+    }
+
+    .link-detail-comment {
+        span {
+            display: block;
+            padding: 0.8em;
+            color: white;
+            border-radius: 6px;
+            background-color: lighten($twitter-color, 8%);
+        }
+    }
+
+    .link-detail-jump {
+        text-align: center;
+    }
+}
