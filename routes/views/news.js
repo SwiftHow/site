@@ -9,6 +9,8 @@ exports = module.exports = function(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'news';
+	locals.site_title = 'New Events - SWIFT.HOW';
+	locals.meta_description = 'Swift.how is updating every day, you can quickly get your target in these event records.';
 
 	view.on('init', function(next) {
 		New.model.find()

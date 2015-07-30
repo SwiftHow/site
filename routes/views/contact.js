@@ -8,7 +8,8 @@ exports = module.exports = function(req, res) {
 
 	// Set locals
 	locals.section = 'contact';
-	locals.siteTitle = 'Contact Us - SWIFT.HOW';
+	locals.site_title = 'Contact Us - SWIFT.HOW';
+	locals.meta_description = 'Swift.how needs feedback. If you have any idea, issue or advice, please leave a message for us.';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};

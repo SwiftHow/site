@@ -14,7 +14,8 @@ function linkByType(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'link';
-    locals.siteTitle = 'Daily Swift Links - SWIFT.HOW';
+    locals.site_title = 'Daily Swift Links - SWIFT.HOW';
+    locals.meta_description = 'Swift.how collect really helpful swift framework and article link everyday. You can comment on these links. Keep learning!';
 
     locals.linkTypes = [
         { value: 'framework' },
@@ -52,7 +53,8 @@ function linkDetail(req, res, next) {
             if(err) return next(err);
 
             locals.link = link;
-            locals.siteTitle = 'Link: ' + link.name + ' - SWIFT.HOW';
+            locals.site_title = 'Link: ' + link.name + ' - SWIFT.HOW';
+            locals.meta_description = link.comment || link.description;
             next();
         });
     });
