@@ -9,6 +9,7 @@ exports = module.exports = function(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
+	locals.siteTitle = 'SWIFT.HOW - Daily Swift Links, Swift News, iOS APP Tutorial';
 
 	view.on('init', function(next) {
         Link.model.findOne()

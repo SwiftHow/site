@@ -14,6 +14,8 @@ function linkByType(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'link';
+    locals.siteTitle = 'Daily Swift Links - SWIFT.HOW';
+
     locals.linkTypes = [
         { value: 'framework' },
         { value: 'article' },
@@ -50,6 +52,7 @@ function linkDetail(req, res, next) {
             if(err) return next(err);
 
             locals.link = link;
+            locals.siteTitle = 'Link: ' + link.name + ' - SWIFT.HOW';
             next();
         });
     });

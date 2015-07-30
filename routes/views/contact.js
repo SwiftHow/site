@@ -8,6 +8,7 @@ exports = module.exports = function(req, res) {
 
 	// Set locals
 	locals.section = 'contact';
+	locals.siteTitle = 'Contact Us - SWIFT.HOW';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
@@ -15,6 +16,7 @@ exports = module.exports = function(req, res) {
 
 	if (req.query.report) {
 		locals.isBugReport = true;
+		locals.siteTitle = 'SWIFT.HOW - Bug Report';
 	}
 
 	// On POST requests, add the Enquiry item to the database
