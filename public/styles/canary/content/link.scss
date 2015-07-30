@@ -28,10 +28,13 @@
         }
     }
 
-    .link-detail-image {
+    .link-detail-media {
         background-color: $gray-lightest;
-        max-width: 100%;
-        height: auto;
+    }
+
+    .link-detail-image {
+        max-height: 168px;
+        width: auto;
         display: block;
         padding: 0.6em 0;
         /* Centers an image by (1) pushing its left edge to the

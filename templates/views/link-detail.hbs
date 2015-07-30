@@ -11,7 +11,9 @@
     </div>
 
     {{# if link.image}}
-    <img class="link-detail-image" src="{{link.image}}" alt="" />
+    <div class="link-detail-media">
+      <img class="link-detail-image" src="{{link.image}}" alt="{{link.name}} logo" />
+    </div>
     {{/if}}
 
     {{# if link.description}}
