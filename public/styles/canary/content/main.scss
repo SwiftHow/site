@@ -256,14 +256,14 @@
 
         img {
             width: 100%;
-            min-height: 146px;
+            min-height: 126px;
         }
     }
 
     .mdl-card__media.canary-link-image {
         img {
           width: auto;
-          height: 160px;
+          max-height: 126px;
           display: block;
           max-width: 80%;
           padding: 0.6em 0;
