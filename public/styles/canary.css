@@ -719,3 +719,66 @@ hr {
     background-color: #7abef2; }
   .canary-link-detail .link-detail-jump {
     text-align: center; }
+
+@media all and (max-width: 500px) {
+  .blog-header {
+    height: auto;
+    width: 100%;
+    padding: 0; }
+    .blog-header nav {
+      top: inherit;
+      position: inherit; }
+    .blog-header .menu {
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      /* for Safari and iOS */
+      -ms-transform: translateX(-50%);
+      /* for IE9 */
+      transform: translateX(-50%); }
+      .blog-header .menu li {
+        text-align: center;
+        margin: 0 0 5px 0; }
+        .blog-header .menu li a {
+          width: 100px; }
+      .blog-header .menu .nav-current a {
+        border-radius: 4px;
+        background-color: white;
+        color: #3B5998; }
+  .mdl-grid {
+    padding: 0; }
+  .container {
+    width: 100%; }
+  .blog-logo {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    height: 36px; }
+  .blog-logo img {
+    height: 30px;
+    position: relative;
+    top: 4px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    /* for Safari and iOS */
+    -ms-transform: translateX(-50%);
+    /* for IE9 */
+    transform: translateX(-50%); }
+  .slogan {
+    display: none; }
+  .canary-link-image img {
+    max-height: 40px; }
+  .canary-card .mdl-card__media img {
+    min-height: inherit; }
+  .footer-wrapper .menu {
+    display: none; }
+  .footer-wrapper .footer-copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.3em 0; }
+  .blog-footer .footer-links {
+    float: none;
+    margin: 10px 0 5px 0;
+    text-align: center; } }
