@@ -563,7 +563,8 @@ hr {
     background: transparent;
     height: auto;
     padding: 0.2em 1.3em;
-    color: #666666; }
+    color: #666666;
+    font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "sans-serif"; }
   .canary-card .mdl-card__actions {
     position: absolute;
     bottom: 0; }

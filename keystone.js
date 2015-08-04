@@ -72,7 +72,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'links': 'links',
-	'apps': 'apps',
+	'apps': ['apps', 'apptypes'],
 	'users': 'users',
 	'news': 'news'
 });
