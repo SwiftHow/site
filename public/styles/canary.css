@@ -562,7 +562,8 @@ hr {
   .canary-card .mdl-card__supporting-text {
     background: transparent;
     height: auto;
-    padding: 0.2em 1.3em; }
+    padding: 0.2em 1.3em;
+    color: #666666; }
   .canary-card .mdl-card__actions {
     position: absolute;
     bottom: 0; }
