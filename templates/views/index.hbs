@@ -13,6 +13,17 @@
 </div>
 
 <div class="canary-cards container">
+	<h2>Latest blog</h2>
+
+	<div class="mdl-grid">
+		<div class="canary-card mdl-cell mdl-card mdl-cell--12-col mdl-shadow--2dp">
+			<div id="article-loading" class="canary-progress-wrap">
+				<div class="canary-progress mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+			</div>
+			<div id="article" class="article"></div>
+		</div>
+	</div>
+	
 	{{#if todayLink}}
 	<h2>Today Recommendation</h2>
 
@@ -99,14 +110,4 @@
 		</div>
 	</div>
 
-	<h2>Latest blog</h2>
-
-	<div class="mdl-grid">
-		<div class="canary-card mdl-cell mdl-card mdl-cell--12-col mdl-shadow--2dp">
-			<div id="article-loading" class="canary-progress-wrap">
-				<div class="canary-progress mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-			</div>
-			<div id="article" class="article"></div>
-		</div>
-	</div>
 </div>
