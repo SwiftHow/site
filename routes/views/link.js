@@ -65,7 +65,13 @@ function linkDetail(req, res, next) {
         });
     });
 
-    view.render('link-detail');
+    view.render(function(err, req, res) {
+      if(err) {
+        return res.render('404');
+      }
+
+      res.render('link-detail');
+    });
 }
 
 function jump(req, res, next) {
