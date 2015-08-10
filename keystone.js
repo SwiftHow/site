@@ -74,7 +74,8 @@ keystone.set('nav', {
 	'links': 'links',
 	'apps': ['apps', 'app-tags'],
 	'users': 'users',
-	'news': 'news'
+	'news': 'news',
+	'timelines': 'timelines'
 });
 
 // Start Keystone to connect to your database and initialise the web server
