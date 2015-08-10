@@ -30,6 +30,10 @@ keystone.set('404', function(req, res, next) {
 	res.status(404).render('404');
 });
 
+keystone.set('500', function(req, res, next) {
+	res.status(500).render('500');
+});
+
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
