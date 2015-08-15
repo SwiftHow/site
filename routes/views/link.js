@@ -52,6 +52,12 @@ function linkDetail(req, res, next) {
         Link.model.findById(id, function(err, link) {
             if(err) return next(err);
 
+            if(!link) {
+              var notfound = new Error();
+              notfound.status = 404;
+              return next(notfound);
+            }
+
             locals.link = link;
             locals.site_title = 'Link: ' + link.name + ' - SWIFT.HOW';
             locals.meta_description = link.comment || link.description;
@@ -59,7 +65,13 @@ function linkDetail(req, res, next) {
         });
     });
 
-    view.render('link-detail');
+    view.render(function(err, req, res) {
+      if(err) {
+        return res.render('404');
+      }
+
+      res.render('link-detail');
+    });
 }
 
 function jump(req, res, next) {
@@ -72,10 +84,12 @@ function jump(req, res, next) {
     Link.model.findById(id, function(err, link) {
         if(err) return next(err);
 
-        link.hot++;
-        link.save(function(err) {
-            if(err) return next(err);
-        });
+        if(link) {
+          link.hot++;
+          link.save(function(err) {
+              if(err) return next(err);
+          });
+        }
     });
 }
 
