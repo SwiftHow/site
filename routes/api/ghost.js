@@ -8,7 +8,7 @@ var will_expired = 0;
 var token_type = '';
 
 function getNewToken(callback) {
-    var url = 'https://blog.swift.how/ghost/api/v0.1/authentication/token';
+    var url = 'https://swift.how/ghost/api/v0.1/authentication/token';
     var form = {
         grant_type: 'password',
         username: process.env.BLOG_USERNAME,
