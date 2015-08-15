@@ -25,7 +25,7 @@ exports.initLocals = function(req, res, next) {
 
 	locals.navLinks = [
 		{ label: 'Home',		key: 'home',		href: '/' },
-		{ label: 'Blog',		key: 'blog',		href: 'https://blog.swift.how/' },
+		// { label: 'Blog',		key: 'blog',		href: 'https://blog.swift.how/' },
 		{ label: 'Link',		key: 'link', 		href: '/link' },
 		// { label: 'App',		key: 'app',		href: '/app' },
 		// { label: 'Tutorial',	key: 'tutorial',	href: '/tutorial' },
