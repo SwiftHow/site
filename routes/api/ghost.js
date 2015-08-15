@@ -33,7 +33,7 @@ function getNewToken(callback) {
 }
 
 function refreshToken(callback) {
-    var url = 'https://blog.swift.how/ghost/api/v0.1/authentication/token';
+    var url = 'https://swift.how/ghost/api/v0.1/authentication/token';
     var form = {
         grant_type: 'refresh_token',
         refresh_token: refresh_token,
@@ -76,7 +76,7 @@ exports = module.exports = function(req, res) {
         if(err) return res.status(500).json(err);
 
         var options = {
-            url: 'https://blog.swift.how/ghost/api/v0.1/posts?limit=1',
+            url: 'https://swift.how/ghost/api/v0.1/posts?limit=1',
             headers: {
                 Authorization: token_type + ' ' + access_token
             }
