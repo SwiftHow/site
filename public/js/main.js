@@ -17,7 +17,7 @@ $(function() {
                 '<span class="mdl-typography--font-light mdl-typography--subhead limit-length">' + post.markdown + '</span>' +
             '</div>' +
             '<div class="mdl-card__actions">' +
-                '<a class="mdl-button mdl-js-button mdl-typography--text-uppercase mdl-button--primary" href="https://blog.swift.how' + post.url + '">' +
+                '<a class="mdl-button mdl-js-button mdl-typography--text-uppercase mdl-button--primary" href="https://swift.how' + post.url + '">' +
                     'Take a look!' +
                 '</a>' +
             '</div>';
